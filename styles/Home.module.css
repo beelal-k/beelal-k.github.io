@@ -61,7 +61,7 @@
 }
 
 
-@keyframes hibernateEye {
+/* @keyframes hibernateEye {
 
 
 
@@ -88,10 +88,10 @@
     transform: rotate(0deg);
   }
 
-}
+} */
 
 
-@keyframes lookAround {
+/* @keyframes lookAround {
 
 
 
@@ -114,11 +114,9 @@
 
   }
 
-  100% {
-    /* transform: rotate(0deg); */
-  }
+  
 
-}
+} */
 
 .sticky {
   position: fixed;
@@ -161,7 +159,7 @@
 
 
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   0% {
     opacity: 0;
     right: -20%;
@@ -182,7 +180,7 @@
     right: 0%;
   }
 
-}
+} */
 
 .fadeOut {
   animation-name: fadeOut;
@@ -190,7 +188,7 @@
   animation-delay: 3.5s;
 
 }
-
+/* 
 @keyframes fadeOut {
   30% {
     right: 5%;
@@ -201,14 +199,14 @@
     opacity: 0;
     right: -40%;
   }
-}
+} */
 
 .eyeBounce {
   animation-name: eyeBounce;
   animation-duration: 0.5s;
 }
 
-@keyframes eyeBounce {
+/* @keyframes eyeBounce {
 
   20% {
     transform: translate(3%);
@@ -232,7 +230,7 @@
 
 
 
-}
+} */
 
 
 @media (max-width:1280px) {
