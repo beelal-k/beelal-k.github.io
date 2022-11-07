@@ -113,24 +113,24 @@ export default function Home() {
 
 
 
-    // EYE MOVE
-    document.addEventListener('mousemove', (e) => {
+    //   // EYE MOVE
+    //   document.addEventListener('mousemove', (e) => {
 
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
+    //     const mouseX = e.clientX;
+    //     const mouseY = e.clientY;
 
-      const anchor = document.getElementById('container');
-      const rekt = anchor.getBoundingClientRect();
+    //     const anchor = document.getElementById('container');
+    //     const rekt = anchor.getBoundingClientRect();
 
-      const anchorX = rekt.left + rekt.width / 2;
-      const anchorY = rekt.top + rekt.height / 2;
+    //     const anchorX = rekt.left + rekt.width / 2;
+    //     const anchorY = rekt.top + rekt.height / 2;
 
-      const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
+    //     const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
 
-      const eyeHole = document.getElementById('eye');
-      eyeHole.style.transform = `rotate(${90 + angleDeg}deg)`;
+    //     const eyeHole = document.getElementById('eye');
+    //     eyeHole.style.transform = `rotate(${90 + angleDeg}deg)`;
 
-    })
+    //   })
 
   }, []);
 
@@ -166,15 +166,16 @@ export default function Home() {
   }
 
 
-  function angle(cx, cy, ex, ey) {
-    const dy = ey - cy;
-    const dx = ex - cx;
+  // function angle(cx, cy, ex, ey) {
+  //   const dy = ey - cy;
+  //   const dx = ex - cx;
 
-    const rad = Math.atan2(dy, dx);
-    const deg = rad * 180 / Math.PI;
-    return deg;
+  //   const rad = Math.atan2(dy, dx);
+  //   const deg = rad * 180 / Math.PI;
+  //   return deg;
 
-  }
+  // }
+
 
   return (
 
@@ -239,7 +240,7 @@ export default function Home() {
 
       </section>
 
-{/* 
+      {/* 
       <section className={`mt-20`} id="contact">
 
         <p className={`mt-10 text-3xl text-center font-semibold input ${styles.projectsHeading}`} onClick={badClick} id="projects">Contact me</p>
