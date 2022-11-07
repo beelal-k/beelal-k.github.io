@@ -193,7 +193,7 @@ export default function Home() {
           <p goto="projects" prefetch="false" onClick={linkHandler} id='navChild2' className={`${styles.navbarLink} cursor-pointer eyeExpandOnHover hover:bg-white transition-all hover:transition-all hover:text-[#363636] font-semibold border-y-2 w-1/2  xl:p-2 p-2`}>Projects</p>
           <p goto="contact" prefetch="false" onClick={linkHandler} id='navChild3' className={`${styles.navbarLink} cursor-pointer eyeExpandOnHover hover:bg-white transition-all hover:transition-all hover:text-[#363636] font-semibold border-y-2 w-1/2 border-r-2 rounded-r xl:p-2 p-2`}>Contact</p>
         </nav>
-        {/* <Image
+        <Image
           className={`mx-auto w-1/1 xl:w-1/4 lg:w-1/2 md:w-2/3 ${styles.eyeBackground}`}
           id="eyeBack"
           src='/eyeBackground.svg'
@@ -207,7 +207,7 @@ export default function Home() {
           <div className={`${styles.eyeContainer} mx-auto`}>
             <Image src='/eyeHole.svg' width={80} loading='eager' height={80} alt="..." className={`${styles.eyeSVG}`} id="eye" />
           </div>
-        </div> */}
+        </div>
       </header>
 
       <section className={``}>
