@@ -41,24 +41,24 @@ export default function Home() {
   }
 
 
-  // const gmailKey = process.env.NEXT_PUBLIC_EMAILJS_GMAIL_KEY
-  // const templateKey = process.env.NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY
-  // const publicKey = process.env.NEXT_PUBLIC_EMAILJS_KEY
+  const gmailKey = process.env.NEXT_PUBLIC_EMAILJS_GMAIL_KEY
+  const templateKey = process.env.NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_KEY
 
-  // const sendEmail = async (e) => {
-  //   e.preventDefault();
+  const sendEmail = async (e) => {
+    e.preventDefault();
 
-  //   await emailjs.sendForm(gmailKey, templateKey, form.current, publicKey)
-  //     .then((result) => {
-  //       openEmailDialog();
-  //       console.log(result.text);
-  //     }), (error) => {
-  //       console.log(error.text)
-  //     }
+    await emailjs.sendForm(gmailKey, templateKey, form?.current, publicKey)
+      .then((result) => {
+        openEmailDialog();
+        console.log(result.text);
+      }), (error) => {
+        console.log(error.text)
+      }
 
 
 
-  // }
+  }
 
 
   useEffect(() => {
@@ -114,23 +114,23 @@ export default function Home() {
 
 
     //   // EYE MOVE
-    //   document.addEventListener('mousemove', (e) => {
+      document.addEventListener('mousemove', (e) => {
 
-    //     const mouseX = e.clientX;
-    //     const mouseY = e.clientY;
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
 
-    //     const anchor = document.getElementById('container');
-    //     const rekt = anchor.getBoundingClientRect();
+        const anchor = document.getElementById('container');
+        const rekt = anchor.getBoundingClientRect();
 
-    //     const anchorX = rekt.left + rekt.width / 2;
-    //     const anchorY = rekt.top + rekt.height / 2;
+        const anchorX = rekt.left + rekt.width / 2;
+        const anchorY = rekt.top + rekt.height / 2;
 
-    //     const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
+        const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
 
-    //     const eyeHole = document.getElementById('eye');
-    //     eyeHole.style.transform = `rotate(${90 + angleDeg}deg)`;
+        const eyeHole = document.getElementById('eye');
+        eyeHole.style.transform = `rotate(${90 + angleDeg}deg)`;
 
-    //   })
+      })
 
   }, []);
 
@@ -166,15 +166,15 @@ export default function Home() {
   }
 
 
-  // function angle(cx, cy, ex, ey) {
-  //   const dy = ey - cy;
-  //   const dx = ex - cx;
+  function angle(cx, cy, ex, ey) {
+    const dy = ey - cy;
+    const dx = ex - cx;
 
-  //   const rad = Math.atan2(dy, dx);
-  //   const deg = rad * 180 / Math.PI;
-  //   return deg;
+    const rad = Math.atan2(dy, dx);
+    const deg = rad * 180 / Math.PI;
+    return deg;
 
-  // }
+  }
 
 
   return (
@@ -193,7 +193,7 @@ export default function Home() {
           <p goto="projects" prefetch="false" onClick={linkHandler} id='navChild2' className={`${styles.navbarLink} cursor-pointer eyeExpandOnHover hover:bg-white transition-all hover:transition-all hover:text-[#363636] font-semibold border-y-2 w-1/2  xl:p-2 p-2`}>Projects</p>
           <p goto="contact" prefetch="false" onClick={linkHandler} id='navChild3' className={`${styles.navbarLink} cursor-pointer eyeExpandOnHover hover:bg-white transition-all hover:transition-all hover:text-[#363636] font-semibold border-y-2 w-1/2 border-r-2 rounded-r xl:p-2 p-2`}>Contact</p>
         </nav>
-        <Image
+        {/* <Image
           className={`mx-auto w-1/1 xl:w-1/4 lg:w-1/2 md:w-2/3 ${styles.eyeBackground}`}
           id="eyeBack"
           src='/eyeBackground.svg'
@@ -207,7 +207,7 @@ export default function Home() {
           <div className={`${styles.eyeContainer} mx-auto`}>
             <Image src='/eyeHole.svg' width={80} loading='eager' height={80} alt="..." className={`${styles.eyeSVG}`} id="eye" />
           </div>
-        </div>
+        </div> */}
       </header>
 
       <section className={``}>
@@ -240,7 +240,7 @@ export default function Home() {
 
       </section>
 
-      {/* 
+      
       <section className={`mt-20`} id="contact">
 
         <p className={`mt-10 text-3xl text-center font-semibold input ${styles.projectsHeading}`} onClick={badClick} id="projects">Contact me</p>
@@ -251,7 +251,7 @@ export default function Home() {
           <input type='submit' className={`btn border-2 xl:w-1/3 w-1/2 hover:bg-[#b8b8b8] cursor-pointer hover:border-[#b8b8b8]  hover:transition-all transition-all rounded bg-[#f3f3f3] text-[#363636] font-semibold text-xl mx-auto p-2 mt-3 eyeExpandOnHover`} />
         </form>
 
-      </section> */}
+      </section>
 
       <footer className={`mt-20 xl:justify-start justify-center items-center mx-auto xl:w-1/3 flex flex-col gap-5 pb-20`}>
         <Link href='https://github.com/beelal-k' prefetch={false} target="_blank" className={`flex items-center eyeExpandOnHover`}><Image src='/githubIcon.svg' width={30} height={40} alt="..." className={`inline mr-4 `} /><span className={`border-b`}>github.com/beelal-k</span></Link>
