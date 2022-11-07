@@ -119,9 +119,6 @@ export default function Home() {
       navBarFix();
     }
 
-
-
-
     //   // EYE MOVE
       document.addEventListener('mousemove', (e) => {
 
