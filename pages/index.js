@@ -46,6 +46,14 @@ export default function Home() {
   const templateKey = process.env.NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY
   const publicKey = process.env.NEXT_PUBLIC_EMAILJS_KEY
 
+
+  console.log(gmailKey);
+  console.log(templateKey);
+  console.log(publicKey);
+  
+  
+  
+  
   const sendEmail = async (e) => {
     e.preventDefault();
 
