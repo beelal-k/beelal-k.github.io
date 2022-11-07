@@ -18,6 +18,10 @@ jobs:
       matrix:
         node-version: [14.x, 16.x, 18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    env: 
+        NEXT_PUBLIC_EMAILJS_KEY: ${{secrets.NEXT_PUBLIC_EMAILJS_KEY}}
+        NEXT_PUBLIC_EMAILJS_GMAIL_KEY: ${{secrets.NEXT_PUBLIC_EMAILJS_GMAIL_KEY}}
+        NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY: ${{secrets.NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY}}
 
     steps:
     - uses: actions/checkout@v3
@@ -29,11 +33,9 @@ jobs:
     - run: npm ci
     - run: npm run build
     - run: npm run export
+    - run: touch ./out/.nojekyll
   
-#       env: 
-#         NEXT_PUBLIC_EMAILJS_KEY: ${{secrets.NEXT_PUBLIC_EMAILJS_KEY}}
-#         NEXT_PUBLIC_EMAILJS_GMAIL_KEY: ${{secrets.NEXT_PUBLIC_EMAILJS_GMAIL_KEY}}
-#         NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY: ${{secrets.NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY}}
+   
     
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
