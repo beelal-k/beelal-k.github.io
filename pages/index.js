@@ -41,10 +41,14 @@ export default function Home() {
   }
 
 
+  const gmailKey = process.env.NEXT_PUBLIC_EMAILJS_GMAIL_KEY
+  const templateKey = process.env.NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_KEY
+
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    await emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_GMAIL_KEY, process.env.NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY, form.current, process.env.NEXT_PUBLIC_EMAILJS_KEY)
+    await emailjs.sendForm(gmailKey, templateKey, form.current, publicKey)
       .then((result) => {
         openEmailDialog();
         console.log(result.text);
@@ -171,8 +175,6 @@ export default function Home() {
     return deg;
 
   }
-
-
 
   return (
 
