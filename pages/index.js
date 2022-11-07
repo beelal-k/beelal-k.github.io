@@ -33,6 +33,7 @@ export default function Home() {
 
   const linkHandler = (e) => {
     e.preventDefault();
+    
     const goto = e.target.getAttribute("goto");
     setTimeout(() => {
       scroll2Element(goto);
