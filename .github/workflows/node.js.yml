@@ -30,6 +30,10 @@ jobs:
     - run: npm run build
     - run: npm run export
     - run: touch ./out/.nojekyll
+      env: 
+        NEXT_PUBLIC_EMAILJS_KEY: ${{secrets.NEXT_PUBLIC_EMAILJS_KEY}}
+        NEXT_PUBLIC_EMAILJS_GMAIL_KEY: ${{secrets.NEXT_PUBLIC_EMAILJS_GMAIL_KEY}}
+        NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY: ${{secrets.NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY}}
     
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
