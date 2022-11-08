@@ -225,7 +225,7 @@ export default function Home() {
           <section className={`mx-auto mt-10 container flex flex-col xl:flex-row gap-10 xl:w-3/4 w-4/5 `} onClick={badClick}>
             <div className={`mx-auto xl:w-1/2`}>
               <Link href='https://github.com/beelal-k/the-outnet-clone' target="_blank"><Image src='/outnetWebsite.jpg' width={700} height={500} alt="..." className={`mx-auto rounded eyeExpandOnHover`} id="projectImage" /></Link>
-              <p className={`font-thin xl:text-lg mt-5 `}><span className={`font-semibold`}>The Outnet:</span> A clone of the e-commerce website, link to github repo is <Link href='https://github.com/beelal-k/the-outnet-clone' className={`underline font-medium eyeExpandOnHover`}>here</Link></p>
+              <p className={`font-thin xl:text-lg mt-5 `}><span className={`font-semibold`}>The Outnet:</span> A clone of the e-commerce website, link to github repo is <Link href='https://github.com/beelal-k/the-outnet-clone' className={`underline font-semibold eyeExpandOnHover`}>here</Link></p>
               <p className={`font-semibold mt-1`}>Built with: <span className={`font-thin`}>React.js, Bootstrap,  MongoDB, Express.js</span></p>
             </div>
 
