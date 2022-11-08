@@ -184,6 +184,7 @@ export default function Home() {
 
       <Head>
         <title>Bilal&apos;s Portofolio</title>
+        <link rel="favicon" href='/favicon.ico'/>
       </Head>
 
       <h1 className={`text-center mt-7 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold`}>Khawaja Muhammad Bilal</h1>
