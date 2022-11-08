@@ -26,7 +26,7 @@ export default function Home() {
 
   const scroll2Element = (elemID) => {
     window.scrollTo({
-      top: document.getElementById(elemID).offsetTop - 20,
+      top: document.getElementById(elemID).offsetTop - 120,
       behavior: "smooth",
     });
   }
