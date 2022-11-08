@@ -47,11 +47,6 @@ export default function Home() {
   const publicKey = process.env.NEXT_PUBLIC_EMAILJS_KEY
 
 
-  console.log(gmailKey);
-  console.log(templateKey);
-  console.log(publicKey);
-  
-  
   
   
   const sendEmail = async (e) => {
@@ -189,7 +184,6 @@ export default function Home() {
 
       <Head>
         <title>Bilal&apos;s Portofolio</title>
-        <html lang='en' />
       </Head>
 
       <h1 className={`text-center mt-7 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold`}>Khawaja Muhammad Bilal</h1>
@@ -224,20 +218,20 @@ export default function Home() {
               <p className={`border-r pr-10 pt-2 pb-3 font- text-lg `}><span className={``}>I&apos;m experienced in:</span><span className={`text-md font-thin`}> <br /> Next.js <br />TailwindCSS <br />MongoDB <br /> and more...</span></p>
               <p className={`pl-10 pt-2 font-light text-lg`}><span className={`font-medium`}>My hobbies include:</span> <span className={`text-lg font-thin`}><br />Reading <br />Sketching<br />Blogging </span></p>
             </div>
-            <p className={`font-thin mt-8 text-center`}>I&apos;m current freelancing and <span className={`font-semibold`}>open for work</span>.</p>
+            <p className={`font-thin mt-8 text-center`}>I&apos;m currently freelancing and <span className={`font-semibold`}>open for work</span>.</p>
           </section>
 
           <p className={`mt-20 text-3xl text-center font-semibold ${styles.projectsHeading}`} id="projects">Projects</p>
           <section className={`mx-auto mt-10 container flex flex-col xl:flex-row gap-10 xl:w-3/4 w-4/5 `} onClick={badClick}>
             <div className={`mx-auto xl:w-1/2`}>
-              <Link href='https://github.com/beelal-k/the-outnet-clone'><Image src='/outnetWebsite.jpg' width={700} height={500} alt="..." className={`mx-auto rounded eyeExpandOnHover`} id="projectImage" /></Link>
-              <p className={`font-thin xl:text-lg mt-5 `}>A clone of the e-commerce website &apos;The Outnet&apos;, link to github repo is <Link href='https://github.com/beelal-k/the-outnet-clone' className={`underline font-medium eyeExpandOnHover`}>here</Link></p>
+              <Link href='https://github.com/beelal-k/the-outnet-clone' target="_blank"><Image src='/outnetWebsite.jpg' width={700} height={500} alt="..." className={`mx-auto rounded eyeExpandOnHover`} id="projectImage" /></Link>
+              <p className={`font-thin xl:text-lg mt-5 `}><span className={`font-semibold`}>The Outnet:</span> A clone of the e-commerce website, link to github repo is <Link href='https://github.com/beelal-k/the-outnet-clone' className={`underline font-medium eyeExpandOnHover`}>here</Link></p>
               <p className={`font-semibold mt-1`}>Built with: <span className={`font-thin`}>React.js, Bootstrap,  MongoDB, Express.js</span></p>
             </div>
 
             <div className={`mx-auto xl:w-1/2 `} >
               <Image src='/zchromeWebsite.jpg' width={700} height={500} alt="..." className={`mx-auto eyeExpandOnHover rounded`} />
-              <p className={`font-thin xl:text-lg mt-5 `}>A surface pattern design market, currently a <span className={`font-semibold`}>work in progress</span>.</p>
+              <p className={`font-thin xl:text-lg mt-5 `}><span className={`font-semibold`}>ZChrome Studios:</span> A surface pattern design market, currently a work in progress.</p>
               <p className={`font-semibold mt-1 `}>Built with: <span className={`font-thin`}>React.js, Bootstrap, Firebase</span></p>
             </div>
 
