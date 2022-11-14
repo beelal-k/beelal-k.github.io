@@ -13,7 +13,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env: 
+      NEXT_PUBLIC_EMAILJS_KEY: Pps2Sl7jHJVuNE6PI
+      NEXT_PUBLIC_EMAILJS_GMAIL_KEY: service_bilalk_gmail
+      NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY: template_6ub1rea
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
@@ -30,10 +33,7 @@ jobs:
     - run: npm run build
     - run: npm run export
     - run: touch ./out/.nojekyll
-      env: 
-        NEXT_PUBLIC_EMAILJS_KEY: ${{secrets.NEXT_PUBLIC_EMAILJS_KEY}}
-        NEXT_PUBLIC_EMAILJS_GMAIL_KEY: ${{secrets.NEXT_PUBLIC_EMAILJS_GMAIL_KEY}}
-        NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY: ${{secrets.NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY}}
+ 
      
     
     - name: Deploy 🚀
