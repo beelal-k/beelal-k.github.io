@@ -52,7 +52,7 @@ export default function Home() {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    await emailjs.sendForm(gmailKey, templateKey, form?.current, publicKey)
+    await emailjs.sendForm(gmailKey, templateKey, form?.current, 'Pps2Sl7jHJVuNE6PI')
       .then((result) => {
         openEmailDialog();
         console.log(result.text);
