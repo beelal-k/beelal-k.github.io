@@ -42,17 +42,10 @@ export default function Home() {
   }
 
 
-  const gmailKey = process.env.NEXT_PUBLIC_EMAILJS_GMAIL_KEY
-  const templateKey = process.env.NEXT_PUBLIC_EMAILJS_GMAIL_TEMPLATE_KEY
-  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_KEY
-
-
-  
-  
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    await emailjs.sendForm(gmailKey, templateKey, form?.current, 'Pps2Sl7jHJVuNE6PI')
+    await emailjs.sendForm('service_bilalk_gmail', 'template_6ub1rea', form?.current, 'Pps2Sl7jHJVuNE6PI')
       .then((result) => {
         openEmailDialog();
         console.log(result.text);
@@ -115,23 +108,23 @@ export default function Home() {
     }
 
     //   // EYE MOVE
-      document.addEventListener('mousemove', (e) => {
+    document.addEventListener('mousemove', (e) => {
 
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
 
-        const anchor = document.getElementById('container');
-        const rekt = anchor.getBoundingClientRect();
+      const anchor = document.getElementById('container');
+      const rekt = anchor.getBoundingClientRect();
 
-        const anchorX = rekt.left + rekt.width / 2;
-        const anchorY = rekt.top + rekt.height / 2;
+      const anchorX = rekt.left + rekt.width / 2;
+      const anchorY = rekt.top + rekt.height / 2;
 
-        const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
+      const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
 
-        const eyeHole = document.getElementById('eye');
-        eyeHole.style.transform = `rotate(${90 + angleDeg}deg)`;
+      const eyeHole = document.getElementById('eye');
+      eyeHole.style.transform = `rotate(${90 + angleDeg}deg)`;
 
-      })
+    })
 
   }, []);
 
@@ -184,7 +177,7 @@ export default function Home() {
 
       <Head>
         <title>Bilal&apos;s Portofolio</title>
-        <link rel="favicon" href='/favicon.ico'/>
+        <link rel="favicon" href='/favicon.ico' />
       </Head>
 
       <h1 className={`text-center mt-7 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold`}>Khawaja Muhammad Bilal</h1>
@@ -241,7 +234,7 @@ export default function Home() {
 
       </section>
 
-      
+
       <section className={`mt-20`} id="contact">
 
         <p className={`mt-10 text-3xl text-center font-semibold input ${styles.projectsHeading}`} onClick={badClick} id="projects">Contact me</p>
