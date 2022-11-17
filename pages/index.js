@@ -248,6 +248,7 @@ export default function Home() {
       </section>
 
       <footer className={`mt-20 xl:justify-start justify-center items-center mx-auto xl:w-1/3 flex flex-col gap-5 pb-20`}>
+        <Link href='' prefetch={false} target="_blank" className={`flex items-center eyeExpandOnHover pointer-events-none `}><Image src='/emailIcon.svg' width={25} height={25} alt="..." className={`inline mr-4 `} /><span className={`border-b`}>bilalk.dev@gmail.com</span></Link>
         <Link href='https://github.com/beelal-k' prefetch={false} target="_blank" className={`flex items-center eyeExpandOnHover`}><Image src='/githubIcon.svg' width={30} height={40} alt="..." className={`inline mr-4 `} /><span className={`border-b`}>github.com/beelal-k</span></Link>
         <Link href='https://www.linkedin.com/in/bilalk902/' prefetch={false} target="_blank" className={`flex items-center eyeExpandOnHover `}><Image src='/linkedinIcon.svg' width={23} height={40} alt="..." className={`ml-1 inline mr-5`} /><span className={`border-b`}>linkedin.com/in/bilalk902/</span></Link>
         <Link href='https://medium.com/@bilal_k' prefetch={false} target="_blank" className={`flex items-center eyeExpandOnHover `}><Image src='/mediumIcon.svg' width={25} height={40} alt="..." className={`ml-1 inline mr-5`} /><span className={`border-b`}>medium.com/@bilal_k</span></Link>
