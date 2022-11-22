@@ -232,7 +232,7 @@ export default function Home() {
           </section>
           <section className={`mx-auto mt-10 container flex flex-col xl:flex-row gap-10 xl:w-3/4 w-4/5 `} onClick={badClick}>
             <div className={`xl:w-1/2`}>
-              <Link href='https://github.com/beelal-k/the-outnet-clone' target="_blank"><Image src='/todolist.png' width={700} height={500} alt="..." className={`mx-auto rounded eyeExpandOnHover border-[#1a1a1a]`} id="projectImage" /></Link>
+              <Link href='https://to-do-list-by-bilal.vercel.app/' target="_blank"><Image src='/todolist.png' width={700} height={500} alt="..." className={`mx-auto rounded eyeExpandOnHover border-[#1a1a1a]`} id="projectImage" /></Link>
               <p className={`font-thin xl:text-lg mt-5 `}><span className={`font-semibold`}>To Do List:</span> A simple to-do list. You can check out the demo using this <Link href='https://to-do-list-by-bilal.vercel.app/' className={`underline font-semibold eyeExpandOnHover`}>link</Link>.</p>
               <p className={`font-semibold mt-1`}>Built with: <span className={`font-thin`}>React.js</span></p>
             </div>
