@@ -219,7 +219,7 @@ export default function Home() {
           <section className={`mx-auto mt-10 container flex flex-col xl:flex-row gap-10 xl:w-3/4 w-4/5 `} onClick={badClick}>
             <div className={`mx-auto xl:w-1/2`}>
               <Link href='https://github.com/beelal-k/the-outnet-clone' target="_blank"><Image src='/outnetWebsite.jpg' width={700} height={500} alt="..." className={`mx-auto rounded eyeExpandOnHover`} id="projectImage" /></Link>
-              <p className={`font-thin xl:text-lg mt-5 `}><span className={`font-semibold`}>The Outnet:</span> A clone of the e-commerce website, link to github repo is <Link href='https://github.com/beelal-k/the-outnet-clone' className={`underline font-semibold eyeExpandOnHover`}>here</Link></p>
+              <p className={`font-thin xl:text-lg mt-5 `}><span className={`font-semibold`}>The Outnet:</span> A clone of the e-commerce website, link to github repo is <Link href='https://github.com/beelal-k/the-outnet-clone' className={`underline font-semibold eyeExpandOnHover`}>here</Link>.</p>
               <p className={`font-semibold mt-1`}>Built with: <span className={`font-thin`}>React.js, Bootstrap,  MongoDB, Express.js</span></p>
             </div>
 
@@ -230,6 +230,14 @@ export default function Home() {
             </div>
 
           </section>
+          <section className={`mx-auto mt-10 container flex flex-col xl:flex-row gap-10 xl:w-3/4 w-4/5 `} onClick={badClick}>
+            <div className={`xl:w-1/2`}>
+              <Link href='https://github.com/beelal-k/the-outnet-clone' target="_blank"><Image src='/todolist.png' width={700} height={500} alt="..." className={`mx-auto rounded eyeExpandOnHover border-[#1a1a1a]`} id="projectImage" /></Link>
+              <p className={`font-thin xl:text-lg mt-5 `}><span className={`font-semibold`}>To Do List:</span> A simple to-do list. You can check out the demo using this <Link href='https://to-do-list-by-bilal.vercel.app/' className={`underline font-semibold eyeExpandOnHover`}>link</Link>.</p>
+              <p className={`font-semibold mt-1`}>Built with: <span className={`font-thin`}>React.js</span></p>
+            </div>
+          </section>
+
         </div>
 
       </section>
@@ -252,6 +260,7 @@ export default function Home() {
         <Link href='https://github.com/beelal-k' prefetch={false} target="_blank" className={`flex items-center eyeExpandOnHover`}><Image src='/githubIcon.svg' width={30} height={40} alt="..." className={`inline mr-4 `} /><span className={`border-b`}>github.com/beelal-k</span></Link>
         <Link href='https://www.linkedin.com/in/bilalk902/' prefetch={false} target="_blank" className={`flex items-center eyeExpandOnHover `}><Image src='/linkedinIcon.svg' width={23} height={40} alt="..." className={`ml-1 inline mr-5`} /><span className={`border-b`}>linkedin.com/in/bilalk902/</span></Link>
         <Link href='https://medium.com/@bilal_k' prefetch={false} target="_blank" className={`flex items-center eyeExpandOnHover `}><Image src='/mediumIcon.svg' width={25} height={40} alt="..." className={`ml-1 inline mr-5`} /><span className={`border-b`}>medium.com/@bilal_k</span></Link>
+        <p className={`opacity-90`}>This website was made using Next.js and Tailwind CSS</p>
       </footer>
 
 
