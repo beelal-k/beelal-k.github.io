@@ -207,7 +207,7 @@ export default function Home() {
       <section className={``}>
         <div>
           <section onClick={badClick} className={`container xl:w-1/3 w-5/6  mt-5 text-xl flex flex-col justify-center items-center mx-auto`} id="about">
-            <p className={`font-thin text-center ${styles.heroText}`} >Yo! My name&apos;s Bilal, and I&apos;m a full-stack developer, teacher, and blogger. </p>
+            <p className={`font-thin text-center ${styles.heroText}`} >Hello there! My name&apos;s Bilal, and I&apos;m a full-stack developer, teacher, and blogger. </p>
             <div className={`flex text-center mt-8`}>
               <p className={`border-r pr-10 pt-2 pb-3 font- text-lg `}><span className={``}>I&apos;m experienced in:</span><span className={`text-md font-thin`}> <br /> Next.js <br />TailwindCSS <br />MongoDB <br /> and more...</span></p>
               <p className={`pl-10 pt-2 font-light text-lg`}><span className={`font-medium`}>My hobbies include:</span> <span className={`text-lg font-thin`}><br />Reading <br />Sketching<br />Blogging </span></p>
