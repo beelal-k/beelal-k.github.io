@@ -207,7 +207,7 @@ export default function Home() {
       <section className={``}>
         <div>
           <section onClick={badClick} className={`container xl:w-1/3 w-5/6  mt-5 text-xl flex flex-col justify-center items-center mx-auto`} id="about">
-            <p className={`font-thin text-center ${styles.heroText}`} >Yo! My name&apos;s Bilal, and I&apos;m a full-stack developer, teacher, and blogger. </p>
+            <p className={`font-thin text-center ${styles.heroText}`} >Hello there! My name&apos;s Bilal, and I&apos;m a full-stack developer, teacher, and blogger. </p>
             <div className={`flex text-center mt-8`}>
               <p className={`border-r pr-10 pt-2 pb-3 font- text-lg `}><span className={``}>I&apos;m experienced in:</span><span className={`text-md font-thin`}> <br /> Next.js <br />TailwindCSS <br />MongoDB <br /> and more...</span></p>
               <p className={`pl-10 pt-2 font-light text-lg`}><span className={`font-medium`}>My hobbies include:</span> <span className={`text-lg font-thin`}><br />Reading <br />Sketching<br />Blogging </span></p>
@@ -233,8 +233,13 @@ export default function Home() {
           <section className={`mx-auto mt-10 container flex flex-col xl:flex-row gap-10 xl:w-3/4 w-4/5 `} onClick={badClick}>
             <div className={`xl:w-1/2`}>
               <Link href='https://to-do-list-by-bilal.vercel.app/' target="_blank"><Image src='/todolist.png' width={700} height={500} alt="..." className={`mx-auto rounded eyeExpandOnHover border-[#1a1a1a]`} id="projectImage" /></Link>
-              <p className={`font-thin xl:text-lg mt-5 `}><span className={`font-semibold`}>To Do List:</span> A simple to-do list. You can check out the demo using this <Link href='https://to-do-list-by-bilal.vercel.app/' className={`underline font-semibold eyeExpandOnHover`}>link</Link>.</p>
+              <p className={`font-thin xl:text-lg mt-5 `}><span className={`font-semibold`}>To Do List:</span> A simple to-do list. You can check out the demo using this <Link href='https://to-do-list-by-bilal.vercel.app/' target="_blank" className={`underline font-semibold eyeExpandOnHover`}>link</Link>.</p>
               <p className={`font-semibold mt-1`}>Built with: <span className={`font-thin`}>React.js</span></p>
+            </div>
+            <div className={`xl:w-1/2`}>
+              <Link href='https://bilalk-weather.vercel.app/' target="_blank"><Image src='/weather-app.webp' width={700} height={500} alt="..." className={`mx-auto rounded eyeExpandOnHover border-[#1a1a1a]`} id="projectImage" /></Link>
+              <p className={`font-thin xl:text-lg mt-5 `}><span className={`font-semibold`}>Weather.io:</span> A weather application that displays current and upcoming weather. You can check out the demo using this <Link href='https://bilalk-weather.vercel.app/' target="_blank" className={`underline font-semibold eyeExpandOnHover`}>link</Link>.</p>
+              <p className={`font-semibold mt-1`}>Built with: <span className={`font-thin`}>React.js, Sass, Axios and open-meteo weather API</span></p>
             </div>
           </section>
 
