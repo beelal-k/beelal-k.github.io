@@ -338,6 +338,11 @@ header {
     top: 45px;
     /* left: 0; */
   }
+
+  .me {
+    width: 80px;
+    height: 65px;
+  }
 }
 
 @media (max-width: 430px) {
