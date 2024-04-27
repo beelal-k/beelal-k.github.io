@@ -260,6 +260,52 @@ header {
   }
 }
 
+#playingWrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 20px;
+  height: 15px;
+}
+
+.playingBar {
+  width: 4px;
+  height: 100%;
+  background-color: #1ED760;
+  border-radius: 2px;
+  animation: playing 2.2s ease infinite alternate;
+}
+
+.playingBar:nth-of-type(2) {
+  animation-delay: -2.2s;
+}
+
+.playingBar:nth-of-type(3) {
+  animation-delay: -3.7s;
+}
+
+@keyframes playing {
+  10% {
+    transform: scaleY(0.3);
+  }
+
+  30% {
+    transform: scaleY(1);
+  }
+
+  60% {
+    transform: scaleY(0.5);
+  }
+
+  80% {
+    transform: scaleY(0.75);
+  }
+
+  100% {
+    transform: scaleY(0.5);
+  }
+}
+
 @media (max-width: 500px) {
   body {
     padding: 0;
