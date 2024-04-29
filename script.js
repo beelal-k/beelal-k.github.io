@@ -46,9 +46,10 @@ const init = async () => {
 
         if (response) {
             document.body.innerHTML += `
-            <div class="shadow-md p-2 px-3 flex bg-[#1a1a1a] flex-row items-center gap-3  rounded md:w-[300px] w-[90vw] fixed bottom-5 md:left-5 md:m-0">
-                <img id="songCover" class="rounded md:size-[60px] size-[45px]" src="${response.item.album.images[0].url}" />
+            <a href="${response.item.external_urls.spotify}" class="shadow-md p-2  flex bg-[#1a1a1a] flex-row items-center gap-3  rounded-md md:w-[350px] w-[90vw] fixed bottom-5 md:left-5 md:m-0">
+                <img id="songCover" class="rounded md:size-[65px] size-[60px]" src="${response.item.album.images[0].url}" />
                 <div class="flex flex-col gap-1">
+                <p id="artistName" class="text-xs text-white opacity-50">Currently listening to</p>
                     <div class="flex flex-row gap-3 items-center">
                         <div id="playingWrapper">
                             <span class="playingBar"></span>
@@ -58,10 +59,10 @@ const init = async () => {
                         <p id="songName" class="text-sm text-white font-medium">${response.item.name}</p>
                     </div>
                     <div class="flex flex-col gap-1">
-                        <p id="artistName" class="text-sm  text-white opacity-70">${response.item.artists.map((artist) => artist.name).join(', ')}</p>
+                        <p id="artistName" class="md:text-sm text-xs  text-white opacity-70">${response.item.artists.map((artist) => artist.name).join(', ')}</p>
                     </div>
                 </div>
-            </div>
+            </a>
         `;
         }
     } catch (error) {
