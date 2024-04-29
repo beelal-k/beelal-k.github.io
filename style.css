@@ -391,6 +391,23 @@ header {
   }
 }
 
+.scrolling-text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scrollRight 10s linear infinite;
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @media (max-width: 430px) {
   .textCut {
     top: 72px;
