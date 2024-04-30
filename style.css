@@ -391,10 +391,11 @@ header {
   }
 }
 
+
+
 .scrolling-text {
   display: block;
   white-space: nowrap;
-  overflow: hidden;
   animation: scrollRight 10s linear infinite;
 }
 
@@ -404,7 +405,23 @@ header {
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-120%);
+  }
+}
+
+.scrolling-text-longer {
+  display: block;
+  white-space: nowrap;
+  animation: scrollRightLong 10s linear infinite;
+}
+
+@keyframes scrollRightLong {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-230%);
   }
 }
 

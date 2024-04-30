@@ -50,14 +50,14 @@ const init = async () => {
                 <img id="songCover" class="rounded md:size-[65px] size-[60px]" src="${response.item.album.images[0].url}" />
                 <div class="flex flex-col gap-1 w-full">
                 <p id="artistName" class="text-xs text-white opacity-50">Currently listening to</p>
-                    <div class="flex flex-row gap-3 w-[80%] overflow-hidden items-center">
+                    <div class="flex flex-row gap-3 w-[95%] md:max-w-[17rem] max-w-[18rem] overflow-hidden items-center">
                         <div id="playingWrapper">
                             <span class="playingBar"></span>
                             <span class="playingBar"></span>
                             <span class="playingBar"></span>
                         </div>
-                        <div class="overflow-hidden">
-                        <p id="songName" class="text-sm text-white font-medium ${response.item.name.length > 30 ? "scrolling-text" : ""}">${response.item.name}</p>
+                        <div class="overflow-hidden" id="songNameWrapper">
+                        <p id="songName" class="text-sm text-white ${response.item.name.length > 60 ? "scrolling-text-longer" : response.item.name.length > 30 ? "scrolling-text" : " "} font-medium ">${response.item.name}</p>
                         </div>
                     </div>
                     <div class="flex flex-col gap-1">
