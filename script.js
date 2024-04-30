@@ -46,7 +46,7 @@ const init = async () => {
 
         if (response) {
             document.body.innerHTML += `
-            <a href="${response.item.external_urls.spotify}" class="shadow-md p-2  flex bg-[#1a1a1a] flex-row items-center gap-3  rounded-md md:w-[350px] w-[90vw] fixed bottom-5 md:left-5 md:m-0">
+            <a id="spotifyWrapper" href="${response.item.external_urls.spotify}" class="shadow-md p-2  flex bg-[#1a1a1a] flex-row items-center gap-3  rounded-md md:w-[350px] w-[90vw] fixed bottom-5 md:left-5 md:m-0">
                 <img id="songCover" class="rounded md:size-[65px] size-[60px]" src="${response.item.album.images[0].url}" />
                 <div class="flex flex-col gap-1 w-full">
                 <p id="artistName" class="text-xs text-white opacity-50">Currently listening to</p>
@@ -73,4 +73,7 @@ const init = async () => {
 }
 
 init();
-setInterval(init, 3 * 60 * 1000);
+setInterval(() => {
+    init();
+    document.getElementById("spotifyWrapper").remove();
+}, 3 * 60 * 1000);
