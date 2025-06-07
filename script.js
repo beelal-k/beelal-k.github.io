@@ -4,8 +4,8 @@ const secret = "162458c431fc472283cd0def76fe487d";
 const refresh = "AQCXndOEy_HbK_7GGDLUhz7IPO34z6LONfnqAtlKvqm0oJmeCcxJZqh7IcaoEM8_VnG8g0RlK_eUNyNPX4VupKoJNHKBOmu5Ipo_mhnnGFf11wWmxStDLQXajlgtwjUrEuQ";
 
 // Steam API credentials and configuration
-const STEAM_API_KEY = "YOUR_STEAM_API_KEY_HERE"; // Replace with your actual Steam API key
-const STEAM_USER_ID = "YOUR_STEAM_USER_ID_HERE"; // Replace with your Steam User ID (steamid64)
+const STEAM_API_KEY = "3AD2B53F01756A8662B49196DE6F851A";
+const STEAM_USER_ID = "76561198339268158";
 
 const basic = btoa(`${client}:${secret}`);
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
