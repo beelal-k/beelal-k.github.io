@@ -49,7 +49,7 @@ const STEAM_PLAYER_SUMMARIES_ENDPOINT = `https://api.steampowered.com/ISteamUser
 const STEAM_RECENTLY_PLAYED_ENDPOINT = `https://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/`;
 
 const getSteamPlayerInfo = async () => {
-    if (!STEAM_API_KEY || !STEAM_USER_ID || STEAM_API_KEY === "YOUR_STEAM_API_KEY_HERE") {
+    if (!STEAM_API_KEY || !STEAM_USER_ID) {
         console.log("Steam API key or User ID not configured");
         return null;
     }
@@ -72,7 +72,7 @@ const getSteamPlayerInfo = async () => {
 };
 
 const getSteamRecentGames = async () => {
-    if (!STEAM_API_KEY || !STEAM_USER_ID || STEAM_API_KEY === "YOUR_STEAM_API_KEY_HERE") {
+    if (!STEAM_API_KEY || !STEAM_USER_ID) {
         return null;
     }
 
@@ -96,7 +96,6 @@ const getSteamRecentGames = async () => {
 const initSpotify = async () => {
     try {
         const response = await getTopTracks();
-        console.log("Spotify:", response);
 
         if (response) {
             document.body.innerHTML += `
@@ -129,7 +128,6 @@ const initSpotify = async () => {
 const initSteam = async () => {
     try {
         const playerInfo = await getSteamPlayerInfo();
-        console.log("Steam player info:", playerInfo);
 
         if (playerInfo && playerInfo.gameextrainfo) {
             // Player is currently in-game
